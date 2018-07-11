@@ -1,0 +1,49 @@
+#include <nusys.h>
+
+beginseg
+    name    "code"
+    flags   BOOT OBJECT
+    entry   nuBoot
+    address NU_SPEC_BOOT_ADDR
+    stack   NU_SPEC_BOOT_STACK
+    include "codesegment.o"
+	include "$(ROOT)/usr/lib/PR/rspboot.o"
+	include "$(ROOT)/usr/lib/PR/gspF3DEX2.fifo.o"
+	include "$(ROOT)/usr/lib/PR/gspL3DEX2.fifo.o"
+	include "$(ROOT)/usr/lib/PR/gspF3DEX2.Rej.fifo.o"
+    include "$(ROOT)/usr/lib/PR/aspMain.o"
+	include "$(ROOT)/usr/lib/PR/n_aspMain.o"
+        include "$(ROOT)/usr/lib/PR/gspF3DEX2.NoN.fifo.o"
+        include "$(ROOT)/usr/lib/PR/gspF3DLX2.Rej.fifo.o"
+	include "$(ROOT)/usr/lib/PR/gspS2DEX2.fifo.o"
+endseg
+
+// Pointer to bank sounds
+beginseg
+	name "pbank"
+	flags RAW
+	include "../n64st1.ptr"
+endseg
+
+// Bank containing sound data
+beginseg
+	name "wbank"
+	flags RAW
+	include "../n64st1.wbk"
+endseg
+
+// Sound effects list
+beginseg
+	name "sfx"
+	flags RAW
+	include "../sfx.bfx"
+endseg
+
+beginwave
+    name    "sndtestr"
+    include "code"
+    
+	include "pbank"
+	include "wbank"
+	include "sfx"
+endwave
