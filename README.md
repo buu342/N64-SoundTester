@@ -17,10 +17,10 @@ A sample ROM that allows you to switch out sample banks and tune them directly o
 </br></br>
 
 ## FAQ
-**Q:** Some of my sounds don't play after a certain amount of coarse
+**Q:** Some of my sounds don't play after a certain amount of coarse!</br>
 **A:** The only known solution is to lower the frequency of your sound and re-export the bank.
 </br></br>
-**Q:** My sound cuts off really early!
+**Q:** My sound cuts off really early!</br>
 **A:** Make sure you change the length of the sound in the SFX Editor. 48 is equivalent to half a second
 </br></br>
 
