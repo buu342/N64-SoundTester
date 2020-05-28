@@ -3,7 +3,7 @@ A sample ROM that allows you to switch out sample banks and tune them directly o
 </br></br>
 
 ## How To Setup For the First Time
-1) Place the files in a directory on your development machine, prefferably in a location without spaces or special characters in the name.
+1) Place the files in a directory on your development machine, preferrably in a location without spaces or special characters in the name.
 2) (optional) Open the source folder and create a shortcut for makeme.bat, replacing the original shortcut outside the source folder.
 3) Execute makeme.bat to ensure that everything is properly configured. It will spit out errors until everything has been corrected. 
 4) Once a proper compile has been made, the ROM can be found in the source/out folder, or the folder configured in makeme.bat
